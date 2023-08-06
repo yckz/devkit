@@ -2,10 +2,10 @@ package portapps
 
 import (
 	"fmt"
-	"os"
+	_ "os"
 
 	"github.com/yckz/devkit/pkg/utl"
-	_ "gopkg.in/yaml.v3"
+	"gopkg.in/yaml.v3"
 )
 
 // Config holds portapp configuration details
@@ -35,9 +35,9 @@ func (app *App) loadConfig(appcfg interface{}) (err error) {
 		App: appcfg,
 	}
 
-	/*// Write sample config
+  // Write sample config
 	raw, err := yaml.Marshal(app.config)
-	if err != nil {
+		/*if err != nil {
 		return err
 	}
 	err = os.WriteFile(utl.PathJoin(app.RootPath, fmt.Sprintf("%s.sample.yml", app.ID)), raw, 0o644)
@@ -51,10 +51,10 @@ func (app *App) loadConfig(appcfg interface{}) (err error) {
 	//}
 
 	// Read config
-	/*raw, err = os.ReadFile(cfgPath)
-	if err != nil {
+	raw, err = os.ReadFile(cfgPath)
+	/*if err != nil {
 		return err
 	}*/
 
-	// return yaml.Unmarshal(raw, &app.config)
+	 return yaml.Unmarshal(raw, &app.config)
 }
