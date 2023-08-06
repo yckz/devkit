@@ -1,7 +1,7 @@
 package portapps
 
 import (
-	"github.com/yckz/devkit/devkit/pkg/utl"
+	"github.com/yckz/devkit/pkg/utl"
 )
 
 // ElectronAppPath returns the app electron path
