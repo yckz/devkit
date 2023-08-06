@@ -1,7 +1,7 @@
 package portapps
 
 import (
-	"encoding/json"
+	_ "encoding/json"
 	"fmt"
 	"os"
 	"os/exec"
@@ -172,7 +172,7 @@ func (app *App) Launch(args []string) {
 	log.Info().Msgf("Working dir: %s", app.WorkingDir)
 	log.Info().Msgf("App path: %s", app.AppPath)
 	log.Info().Msgf("Data path: %s", app.DataPath)
-	log.Info().Msgf("Previous path: %s", app.Prev.RootPath)
+	// log.Info().Msgf("Previous path: %s", app.Prev.RootPath)
 
 	if !utl.Exists(app.Process) {
 		log.Fatal().Msgf("Application not found in %s", app.Process)
