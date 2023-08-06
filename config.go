@@ -2,7 +2,7 @@ package portapps
 
 import (
 	"fmt"
-	"os"
+	_ "os"
 
 	"github.com/yckz/devkit/pkg/utl"
 	_ "gopkg.in/yaml.v3"
@@ -24,7 +24,7 @@ type Common struct {
 
 // loadConfig load common and app configuration
 func (app *App) loadConfig(appcfg interface{}) (err error) {
-	cfgPath := utl.PathJoin(app.RootPath, fmt.Sprintf("%s.yml", app.ID))
+	// cfgPath := utl.PathJoin(app.RootPath, fmt.Sprintf("%s.yml", app.ID))
 	app.config = &Config{
 		Common: Common{
 			DisableLog: true,
@@ -54,7 +54,7 @@ func (app *App) loadConfig(appcfg interface{}) (err error) {
 	/*raw, err = os.ReadFile(cfgPath)
 	if err != nil {
 		return err
-	}*/
+	}
 
 	// return yaml.Unmarshal(raw, &app.config)
-}
+}*/
