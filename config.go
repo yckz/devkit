@@ -1,10 +1,10 @@
 package portapps
 
 import (
-	"fmt"
+	_"fmt"
 	_ "os"
 
-	"github.com/yckz/devkit/pkg/utl"
+	_"github.com/yckz/devkit/pkg/utl"
 	_ "gopkg.in/yaml.v3"
 )
 
