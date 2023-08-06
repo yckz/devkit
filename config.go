@@ -2,7 +2,7 @@ package portapps
 
 import (
 	"fmt"
-	_ "os"
+	"os"
 
 	"github.com/yckz/devkit/pkg/utl"
 	"gopkg.in/yaml.v3"
@@ -56,5 +56,5 @@ func (app *App) loadConfig(appcfg interface{}) (err error) {
 		return err
 	}*/
 
-	 return yaml.Unmarshal(raw, &app.config)
+	return yaml.Unmarshal(raw, &app.config)
 }
