@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/yckz/devkit/pkg/utl"
-	"gopkg.in/yaml.v3"
+	_ "gopkg.in/yaml.v3"
 )
 
 // Config holds portapp configuration details
@@ -50,11 +50,11 @@ func (app *App) loadConfig(appcfg interface{}) (err error) {
 		return nil
 	}
 
-	// Read config
+	/*// Read config
 	raw, err = os.ReadFile(cfgPath)
 	if err != nil {
 		return err
-	}
+	}*/
 
 	// return yaml.Unmarshal(raw, &app.config)
 }
